@@ -28,8 +28,8 @@ To install PromLi locally, follow these steps:
 
 ### PromLi Website Overview
 
-(![Pomodoro Timer](https://github.com/ind-abhishek/PromLi-TimeManagement/assets/101976775/c719b3d7-fe86-4ecd-b63e-b23c85c427dd)
-)
+![Pomodoro Timer](https://github.com/ind-abhishek/PromLi-TimeManagement/assets/101976775/c719b3d7-fe86-4ecd-b63e-b23c85c427dd)
+
 
 *Screenshot of the PromLi website showcasing its features and user interface.*
 

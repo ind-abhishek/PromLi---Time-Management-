@@ -1,0 +1,660 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk",sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--primary-color);
+        background: url("images/lightbg1.jpg");
+          background-position: center;
+          background-size: cover;
+}
+:root{
+  --primary-color: white;
+  --secondary-color: #212121;
+  --third-color: #fa8072;
+
+}
+
+.dark-theme{
+  --primary-color: #212121;
+  --secondary-color: white;
+}
+
+body::-webkit-scrollbar{
+display: none;  
+}
+
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: var(--third-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+
+.navbar{
+  width: 100%;
+  height: 5px;
+  margin: 0;
+}
+
+.navbar p{
+  color: var(--primary-color);
+  text-align: center;
+  padding: 7px;
+  font-size: 11px;
+  margin: auto;
+  font-weight: 500;
+}
+
+#icon{
+/* background-color: var(--primary-color); */
+
+}
+
+  #icon{
+  height: 40px;
+  margin: 10px;
+  margin-left: 205px;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  height: 25px; 
+  background-color: var(--secondary-color);
+}
+
+
+.side-nav {
+  width: 110px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* Changed left to right */
+  padding: 30px 15px;
+  background: rgba(255, 255, 255, 0.493);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: width 0.5s;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: auto;
+  /* Changed margin-left to margin-right */
+  margin-left: 0;
+  /* Removed margin-left */
+  overflow: hidden;
+}
+
+.user div {
+  display: none;
+}
+
+.user h2 {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.user-img {
+  width: 40px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.star-img {
+  width: 20px;
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+.side-nav ul li {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+ul li img {
+  width: 30px;
+  margin-right: 0px;
+}
+
+ul li p {
+  white-space: nowrap;
+  display: none;
+}
+
+.side-nav .logout{
+  margin-top: 110px;
+}
+
+/* ----------------HOVER------------------------- */
+
+
+.side-nav:hover {
+  width: 250px;
+  right: 0;
+  /* Added this line */
+}
+
+.side-nav:hover .user div {
+  display: block;
+}
+
+.side-nav:hover .user {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  margin-right: auto;
+  /* Changed margin-left to margin-right */
+  margin-left: 0;
+  /* Removed margin-left */
+}
+
+.side-nav:hover .star-img {
+  display: block;
+}
+
+.side-nav:hover .user-img {
+  margin: 0;
+}
+
+.side-nav:hover ul li p {
+  display: block;
+}
+
+.side-nav:hover ul li img {
+  margin-right: 10px;
+}
+
+.side-nav:hover ul li {
+  justify-content: flex-start;
+}
+
+/* ---------------SCROOl Hide--------------- */
+
+.side-nav {
+  /* Your existing styles for the side-nav */
+  transition: transform 0.5s ease-in-out;
+  /* Add transition for transform property */
+  position: fixed;
+  /* Ensure the sidebar stays fixed while transitioning */
+}
+
+.hidden {
+  transform: translateX(100%);
+  /* Move the sidebar to the right to hide it */
+}
+
+/* -------------HERO--------------------- */
+
+.Hero{
+/* background-color: var(--primary-color); */
+
+}
+
+.parent-contener{
+  margin: auto;
+  margin-top: 8%;
+  width: 70%;
+  /* background-color: #af4c4c; */
+  overflow: hidden;
+  justify-content: center;
+  gap: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+
+
+}
+
+.bg-music{
+  float: left;
+  height: fit-content;
+}
+
+.container{
+  float: right;
+  background-color: rgb(20, 20, 20);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+
+.quote{
+  position: absolute;
+  float: left;
+  margin-right: 639px;
+  margin-top: 380px;
+}
+
+.quote iframe {
+  width: 300px;
+  height: 150px
+  
+}
+
+.quote a {
+  display: block;
+  font-size: 12px;
+  color: black;
+}
+
+/* body {
+  background-color: #cd202d;
+} */
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.section-container {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  background-color: #3e3f43;
+  color: #a9a7a7;
+}
+
+.btn-focus {
+  background-color: var(--third-color);
+  color: #ffffff;
+}
+
+.time-btn-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+#time {
+  text-align: center;
+  color: #ffffff;
+  font-size: 5em;
+  font-weight: 600;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+#btn-start,
+#btn-pause {
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+#btn-reset {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 2em;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* To do */
+
+.completed span {
+  text-decoration: line-through;
+}
+
+
+.task-container {
+  margin-top: 2em;
+}
+
+#taskInput {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+#addTaskBtn {
+  padding: 0.5em 1em;
+  margin: 10px;
+  font-size: 1em;
+  background-color: var(--third-color);
+  color: white;
+  border: none;
+  border-radius: 0.5em;  cursor: pointer;
+}
+
+#addTaskBtn:hover {
+  background-color: #3d3d3d;
+}
+
+#pomodoroInput{
+  border-radius: 0.5em;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.task-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-container li {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 0.5em;
+  background-color: #f2f2f2;
+  border-radius: 0.5em;
+}
+
+.task-container li:hover {
+  background-color: #ddd;
+}
+
+
+.task-container span{
+  margin-left: 10px;
+}
+
+.task-container input{
+  size: 10px;
+}
+
+/* Total */
+
+.total-container {
+  color: white;
+}
+
+br {
+  display: block;
+  /* makes it have a width */
+  content: "";
+  /* clears default height */
+  margin-top: 51px;
+  /* change this to whatever height you want it */
+}
+
+
+/* .cover img{
+  margin-top: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:30px;
+  width: 100%;
+} */
+
+
+
+/* -----MAIN------- */
+.details-container{
+  background-color: var(--secondary-color);
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.details {
+  display: block;
+  max-width: 750px;
+  margin: auto;
+    padding: 0 12px;
+    margin-bottom: 5%;
+}
+
+.details h1{
+  color: var(--third-color);
+      margin-top: 6%;
+      margin-bottom: 4%;
+}
+
+.details h3 {
+  color: var(--primary-color);
+  margin-top: 10px;
+
+}
+
+
+
+.details hr {
+  width: 80px;
+  border: 2px solid var(--third-color);
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+
+
+.details p{
+  word-spacing: 1px;
+  color: var(--primary-color);
+}
+
+.details ol li {
+  list-style-type: none;
+  color: var(--primary-color);
+}
+
+/* ----------FOOTAR---------- */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#fullscreen-img {
+  margin-right: 8%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: opacity 0.3s ease-in-out;
+}
+  
+#fullscreen-img.hide {
+  opacity: 0;
+}
+
+.line{
+  align-items: center;
+  justify-content: center;
+  border: 2px solde black;
+}
+
+
+footer{
+  padding: 10px;
+}
+
+footer li{
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+
+footer p{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+footer p a{
+  text-decoration: none;
+  color: var(--third-color);
+}
+.details a{
+  text-decoration: none;
+  color: var(--third-color);
+  margin-top: 10px;
+}
+
+.details .subImfr{
+  color: var(--third-color);
+  margin-top: 10px;
+}
+
+/* --------------------------- */
+@media screen and (min-device-width: 768px) and (max-device-width: 1329px) {
+  .quote {
+    position: relative;
+    /* margin-right: 7px;
+    margin-top: 366px; */
+  }
+  .bg-music{
+    width: 70%;
+  }
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 768px){
+  .bg-music{display: none;}
+  .quote{display: none;}
+  .header{display: none;}
+  .details{
+    max-width: 650px;  
+  }
+  .details p{
+    font-size: 13px;
+  }
+  .details ol li{
+    font-size: 13px;
+    }
+
+  .details h3{
+    font-size: 15px;
+    }
+    br{
+      margin-top: 40px;
+    }
+    .details h1{
+      font-size: 15px;
+    }
+
+}
+
+.g-signin2{
+  margin-left: 7px;
+}

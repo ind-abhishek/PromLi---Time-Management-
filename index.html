@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro Timer</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <meta name="google-signin-client_id"
+    content="1043884457969-cn9tnjeorem7mjfe0is7ir5afp1jn67k.apps.googleusercontent.com">
+
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</head>
+
+<body>
+
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  <section class="Main">
+    <!-- Header -->
+    <div class="header" id="header">
+
+      <nav class="navbar">
+        <span class="announcment">
+          <p>"Hi there!❤️ We're constantly working to improve our site's UI and performance. If you feel any issue on
+            site,
+            feel
+            free to chat
+            with us via live support."</p>
+        </span>
+        <div class="back-chang"></div>
+        <img src="images/moon.png" id="icon">
+      </nav>
+
+      <nav class="side-nav">
+        <div class="user">
+          <img src="images/profil.png" class="user-img">
+          <div>
+            <h2>Abhishek Sharnma</h2>
+            <p>itz.abhieee@gmail.com</p>
+          </div>
+          <img src="images/star.png" class="star-img" alt="star">
+        </div>
+        <ul>
+          <li>
+            <img src="images/dashboard.png">
+            <p>Dashboard</p>
+          </li>
+          <li>
+            <img src="images/reports.png">
+            <p>Reports</p>
+          </li>
+          <li>
+            <img src="images/rewards.png">
+            <p>Rewards</p>
+          </li>
+          <li>
+            <img src="images/projects.png">
+            <p>Projects</p>
+          </li>
+          <li>
+            <img src="images/members.png">
+            <p>Members</p>
+          </li>
+          <li>
+            <img src="images/setting.png">
+            <p>Settings</p>
+          </li>
+          <li class="logout">
+            <div class="g-signin2" data-onsuccess="onSignIn">
+              <img src="images/logout.png">
+              <p>Login</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+  </section>
+
+  <br>
+
+  <section class="Hero">
+    <!-- ------------HERO----------- -->
+
+    <div class="parent-contener">
+      <div class="bg-music">
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/7rgtNs07hIkyfHfrFR0HpP?utm_source=generator&theme=0" width="100%"
+          height="352" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+
+      <div class="container">
+        <div class="section-container">
+          <button id="focus" class="btn btn-timer btn-focus" onclick="focus()">Focus</button>
+          <button id="shortbreak" class="btn btn-shortbreak" onclick="Break()">Short Break</button>
+          <button id="longbreak" class="btn btn-longbreak" onclick="longBreak()">Long Break</button>
+        </div>
+        <div class="time-btn-container">
+          <span id="time"></span>
+          <div class="btn-container">
+            <button id="btn-start" class="show">Start</button>
+            <button id="btn-pause" class="hide">Pause</button>
+            <button id="btn-reset" class="hide">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="task-container">
+          <input type="text" id="taskInput" placeholder="Add a new task...">
+          <input type="number" id="pomodoroInput" min="1" placeholder="Pomodoro count">
+          <button id="addTaskBtn">Add Task</button>
+          <ul id="taskList"></ul>
+        </div>
+
+        <div class="total-container">
+          <p>Total Pomodoro Count: <span id="totalPomodoroCount">0</span></p>
+          <p>Total Time: <span id="totalTime">0 minutes</span></p>
+        </div>
+      </div>
+
+      <div class="quote">
+        <iframe frameBorder="0" frameBorder="0" style=""
+          src="https://kwize.com/quote-of-the-day/embed/&txt=0&font=&color=000000&background=ffffff"></iframe>
+        <a style="" href="https://kwize.com/quote-of-the-day/">Quote of the
+          day
+          @abhsihek</a>
+      </div>
+    </div>
+
+    <div>
+      <img id="fullscreen-img" src="images/fullscreen.png" alt="Fullscreen Image" style="cursor: pointer;">
+    </div>
+
+
+  </section>
+
+  <br>
+  <!-- <div class="cover">
+    <img src="images/background.png" alt="">
+  </div> -->
+  <section class="details-container">
+    <div class="details">
+      <h1>An online Pomodoro Timer to boost your productivity 👍</h1>
+      <h3>What is Pomofocus?</h3>
+      <hr>
+      <p>Pomofocus is a customizable pomodoro timer that works on desktop & mobile browser. The aim of this app is to
+        help you
+        focus on any task you are working on, such as study, writing, or coding. This app is inspired by Pomodoro
+        Technique
+        which is a time management method developed by Francesco Cirillo.</p>
+      <br>
+
+      <h3>What is Pomodoro Technique?</h3>
+      <hr>
+      <p>The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study. The
+        technique uses a
+        timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each
+        interval is
+        known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used
+        as a
+        university student. - Wikipedia</p>
+      <br>
+      <h3>How to Use the Pomodoro Timer?</h3>
+      <hr>
+      <ol>
+        <li>1. Add tasks to work on today</li>
+        <li>2. Set estimated Pomodoros (1 Pomodoro = 25 minutes of work) for each task</li>
+        <li>3. Select a task to work on</li>
+        <li>4. Start the timer and focus on the task for 25 minutes</li>
+        <li>5. Take a 5-minute break when the alarm rings</li>
+        <li>6. Repeat steps 3-5 until you finish the tasks</li>
+      </ol>
+      <br>
+      <h3>Who uses the Pomodoro Technique?</h3>
+      <hr>
+      <p>The Pomodoro Technique is used by people who need to focus on their activities to achieve certain goals.
+        Many of your favorite YouTubers, influencers and entrepreneurs are likely to use this technique to be more
+        productive.
+      <p class="subImfr">If you find yourself easily distracted and procrastinating, this may be your antidote. 💊
+      </p>
+      </p>
+      <br>
+      <h3>The science behind the Pomodoro Technique</h3>
+      <hr>
+      <p>The attention span is the ability to concentrate on a single task, the greater our concentration, the easier it
+        will be for us to do it.
+        Studies have estimated that this interval lasts approximately 20 minutes.
+      <p class="subImfr"><a href="https://www.sciencedaily.com/releases/2011/02/110208131529.htm" class="">It is natural
+          to
+          be distracted in search of new information, but it is also possible to focus again by refreshing the
+          attention span. (Study) 📝</a>
+      </p>
+      </p>
+
+      <!-- --------CHAT SUPPORT---------- -->
+
+      <!--Start of Tawk.to Script-->
+      <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+          var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+          s1.async = true;
+          s1.src = 'https://embed.tawk.to/65d4cd808d261e1b5f62c9f9/1hn3k5g8p';
+          s1.charset = 'UTF-8';
+          s1.setAttribute('crossorigin', '*');
+          s0.parentNode.insertBefore(s1, s0);
+        })();
+      </script>
+      <!--End of Tawk.to Script-->
+
+    </div>
+  </section>
+
+  <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+
+
+  <footer>
+    <p>Made with <3 <a href="https://www.linkedin.com/in/abhieee/" target=”_blank”>Abhishek Sharma</a>
+    </p>
+  </footer>
+
+  <!-- Script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

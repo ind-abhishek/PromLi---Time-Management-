@@ -26,6 +26,14 @@ To install PromLi locally, follow these steps:
 - CSS3
 - JavaScript
 
+### PromLi Website Overview
+
+(![Pomodoro Timer](https://github.com/ind-abhishek/PromLi-TimeManagement/assets/101976775/c719b3d7-fe86-4ecd-b63e-b23c85c427dd)
+)
+
+*Screenshot of the PromLi website showcasing its features and user interface.*
+
+
 ### Contributing:
 Contributions to PromLi are welcome! Feel free to submit bug reports, feature requests, or pull requests to help improve the application.
 

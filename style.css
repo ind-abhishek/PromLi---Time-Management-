@@ -11,9 +11,10 @@ html {
 
 body{
   background-color: var(--primary-color);
-        background: url("images/lightbg1.jpg");
-          background-position: center;
-          background-size: cover;
+  background: url("images/lightbg1.jpg");
+  background-position: center;
+  background-size: cover;
+  
 }
 :root{
   --primary-color: white;
@@ -652,7 +653,50 @@ footer p a{
     .details h1{
       font-size: 15px;
     }
+    .container{
+      width: 100%;
+      padding: 10px;
+    }
 
+    .section-container{
+            margin-left: 10px;
+              margin-right: 10px;
+    }
+
+    .section-container button{
+      width: 80px;
+      height: 50px;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .time-btn-container{
+      margin-left: 10px;
+      margin-right: 10px;
+      align-items: center;
+    }
+  
+    .time-btn-container #time{
+      font-size: 4em;
+      margin-bottom: 10px;
+    }
+
+    .task-container{
+      padding: 10px;
+      padding-bottom: 0;
+    }
+    #pomodoroInput{
+      margin-top: 10px;
+    }
+    #addTaskBtn{
+      margin-left: auto;
+    }
+
+  .total-container p{
+    font-size: 13px;
+    margin-left: 10px;
+  }
 }
 
 .g-signin2{

@@ -697,6 +697,10 @@ footer p a{
     font-size: 13px;
     margin-left: 10px;
   }
+  
+  #fullscreen-img{
+    display: none;
+  }
 }
 
 .g-signin2{

@@ -2,6 +2,13 @@
 
 PromLi is a web-based time management application aimed at helping users optimize their productivity and manage their time effectively. With a focus on enhancing personal development and goal achievement, PromLi offers a range of features designed to streamline task organization, facilitate efficient time allocation, and track progress towards objectives.
 
+### PromLi Website Overview
+
+![Pomodoro Timer](https://github.com/ind-abhishek/PromLi-TimeManagement/assets/101976775/c719b3d7-fe86-4ecd-b63e-b23c85c427dd)
+
+
+*Screenshot of the PromLi website showcasing its features and user interface.*
+
 ### Features:
 1. **Task Organization:** Users can create, edit, and prioritize tasks to maintain a structured approach to their activities.
 2. **Time Allocation:** PromLi allows users to allocate time slots for tasks, helping them manage their schedules more effectively.
@@ -25,14 +32,6 @@ To install PromLi locally, follow these steps:
 - HTML5
 - CSS3
 - JavaScript
-
-### PromLi Website Overview
-
-![Pomodoro Timer](https://github.com/ind-abhishek/PromLi-TimeManagement/assets/101976775/c719b3d7-fe86-4ecd-b63e-b23c85c427dd)
-
-
-*Screenshot of the PromLi website showcasing its features and user interface.*
-
 
 ### Contributing:
 Contributions to PromLi are welcome! Feel free to submit bug reports, feature requests, or pull requests to help improve the application.
